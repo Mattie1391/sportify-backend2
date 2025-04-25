@@ -1,4 +1,6 @@
-const { AppDataSource } = require('./config/data-source');
+// app.js
+
+const AppDataSource = require('./db/data-source');
 
 AppDataSource.initialize()
   .then(() => {
@@ -17,6 +19,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 
 var app = express();
 
@@ -40,7 +43,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/v1/users', usersRouter);
+
 
 app.use(cors());
 app.use(pinoHttp());
