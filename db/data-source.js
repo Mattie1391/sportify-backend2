@@ -1,4 +1,15 @@
 const { DataSource } = require("typeorm");
+const Admin = require("../entities/Admin");
+const User = require("../entities/User");
+const Coach = require("../entities/Coach");
+const Course = require("../entities/Course");
+const Subscription =require("../entities/Subscription");
+const Rating = require("../entities/Rating");
+const CoachSkill = require("../entities/Coach_Skill");
+const Skill = require("../entities/Skill");
+const UserCourseFavorite = require("../entities/User_Course_Favorite");
+const CourseChapter = require("../entities/Course_Chapter");
+const PaymentTransfer  = require("../entities/Payment_Transfer");
 require("dotenv").config();
 
 const AppDataSource = new DataSource({
@@ -11,17 +22,17 @@ const AppDataSource = new DataSource({
   synchronize: true, //開發時 true，部署時請改為 false 並使用 migration
   logging: true,
   entities: [
-    require("../entities/Admin"),
-    require("../entities/User"),
-    require("../entities/Coach"),
-    require("../entities/Course"),
-    require("../entities/Subscription"),
-    require("../entities/Rating"),
-    require("../entities/Coach_Skill"),
-    require("../entities/Skill"),
-    require("../entities/User_Course_Favorite"),
-    require("../entities/Course_Chapter"),
-    require("../entities/Payment_Transfer"),
+    Admin,
+    User,
+    Coach,
+    Course,
+    Subscription,
+    Rating,
+    CoachSkill,
+    Skill,
+    UserCourseFavorite,
+    CourseChapter,
+    PaymentTransfer,
   ],
 });
 

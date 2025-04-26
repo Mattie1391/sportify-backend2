@@ -1,5 +1,3 @@
-// routes/users.js
-
 const express = require('express');
 const bcrypt = require('bcrypt');
 const { isUndefined, isNotValidString } = require('../utils/validators'); // 假設有這些自訂函式
