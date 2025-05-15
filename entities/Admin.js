@@ -22,8 +22,8 @@ module.exports = new EntitySchema({
     // 管理員密碼，用於登入驗證
     password: {
       type: "varchar", // 字串型別
-      length: 50, // 最長長度為 72 個字元（bcrypt 加密後密碼大概會落在這範圍）
-      nullable: false, // 不可為空，必須填寫
+      length: 72, // 最長長度為 72 個字元（bcrypt 加密後密碼大概會落在這範圍）
+      nullable: true, // 不可為空，必須填寫
     },
   },
 });

@@ -20,8 +20,8 @@ module.exports = new EntitySchema({
     },
     password: {
       type: "varchar",
-      length: 50,
-      nullable: false, // 密碼
+      length: 72,
+      nullable: true, // 密碼
     },
     nickname: {
       type: "varchar",
